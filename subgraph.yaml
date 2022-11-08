@@ -1,0 +1,29 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Factories
+    network: mumbai
+    source:
+      address: "0xFE9f0ff00B85B8660397bb80853ddC11Aaca9De1"
+      abi: Factories
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Implementation
+        - Initialized
+        - NewChild
+      abis:
+        - name: Factories
+          file: ./abis/Factories.json
+      eventHandlers:
+        - event: Implementation(address,address)
+          handler: handleImplementation
+        - event: Initialized(uint8)
+          handler: handleInitialized
+        - event: NewChild(address,address)
+          handler: handleNewChild
+      file: ./src/factories.ts
