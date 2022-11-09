@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: VerifyFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0x6e55b00ecfc718d202e57709a747fe3fc7f6e61e"
+      address: "{{ VerifyFactory }}"
       abi: Factory
-      startBlock: 26367408
+      startBlock: {{ VerifyFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -27,11 +27,11 @@ dataSources:
       file: ./src/verifyFactory.ts 
   - kind: ethereum/contract
     name: ERC20BalanceTierFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0xb1C8EA6E410a71290D5C21404D3324e61912e3c6"
+      address: "{{ ERC20BalanceTierFactory }}"
       abi: Factory
-      startBlock: 26367697
+      startBlock: {{ ERC20BalanceTierFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -50,11 +50,11 @@ dataSources:
       file: ./src/erc20BalanceTierFactory.ts 
   - kind: ethereum/contract
     name: ERC721BalanceTierFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0xC0E50AD884EBb7C2582677978d48338D46930a08"
+      address: "{{ ERC721BalanceTierFactory }}"
       abi: Factory
-      startBlock: 26367707
+      startBlock: {{ ERC721BalanceTierFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -73,11 +73,11 @@ dataSources:
       file: ./src/erc721BalanceTierFactory.ts 
   - kind: ethereum/contract
     name: ERC20TransferTierFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0x2f1554BF57a234828ca3D210bA65cF80d8e5073c"
+      address: "{{ ERC20TransferTierFactory }}"
       abi: Factory
-      startBlock: 26367701
+      startBlock: {{ ERC20TransferTierFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -96,11 +96,11 @@ dataSources:
       file: ./src/erc20TransferTierFactory.ts 
   - kind: ethereum/contract
     name: CombineTierFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0x21fC48631F0efA5EFe790b5c05929cEdc271dB43"
+      address: "{{ CombineTierFactory }}"
       abi: Factory
-      startBlock: 26367704
+      startBlock: {{ CombineTierFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -119,11 +119,11 @@ dataSources:
       file: ./src/combineTierFactory.ts 
   - kind: ethereum/contract
     name: VerifyTierFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0x2aAA6104B099B2d1DF1D984F67da042555506B71"
+      address: "{{ VerifyTierFactory }}"
       abi: Factory
-      startBlock: 26367693
+      startBlock: {{ VerifyTierFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -142,11 +142,11 @@ dataSources:
       file: ./src/verifyTierFactory.ts 
   - kind: ethereum/contract
     name: SaleFactory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0xE152e59e644e49AE5D73Df70658084DFc8b5CBb6"
+      address: "{{ SaleFactory }}"
       abi: Factory
-      startBlock: 26367711
+      startBlock: {{ SaleFactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -165,11 +165,11 @@ dataSources:
       file: ./src/saleFactory.ts  
   - kind: ethereum/contract
     name: EmissionsERC20Factory
-    network: mumbai
+    network: {{ network }}
     source:
-      address: "0xE51BeE9adccBafc20507e01EAA4F5aA966306669"
+      address: "{{ EmissionsERC20Factory }}"
       abi: Factory
-      startBlock: 26367724
+      startBlock: {{ EmissionsERC20FactoryBlock }}
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6

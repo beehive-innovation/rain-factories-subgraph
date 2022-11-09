@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: VerifyFactory
@@ -18,13 +18,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: VerifyFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/verifyFactory.ts 
+      file: VerifyFactory/VerifyFactory.wasm
   - kind: ethereum/contract
     name: ERC20BalanceTierFactory
     network: mumbai
@@ -41,13 +41,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: ERC20BalanceTierFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/erc20BalanceTierFactory.ts 
+      file: ERC20BalanceTierFactory/ERC20BalanceTierFactory.wasm
   - kind: ethereum/contract
     name: ERC721BalanceTierFactory
     network: mumbai
@@ -64,13 +64,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: ERC721BalanceTierFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/erc721BalanceTierFactory.ts 
+      file: ERC721BalanceTierFactory/ERC721BalanceTierFactory.wasm
   - kind: ethereum/contract
     name: ERC20TransferTierFactory
     network: mumbai
@@ -87,13 +87,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: ERC20TransferTierFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/erc20TransferTierFactory.ts 
+      file: ERC20TransferTierFactory/ERC20TransferTierFactory.wasm
   - kind: ethereum/contract
     name: CombineTierFactory
     network: mumbai
@@ -110,13 +110,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: CombineTierFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/combineTierFactory.ts 
+      file: CombineTierFactory/CombineTierFactory.wasm
   - kind: ethereum/contract
     name: VerifyTierFactory
     network: mumbai
@@ -133,13 +133,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: VerifyTierFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/verifyTierFactory.ts 
+      file: VerifyTierFactory/VerifyTierFactory.wasm
   - kind: ethereum/contract
     name: SaleFactory
     network: mumbai
@@ -156,13 +156,13 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: SaleFactory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/saleFactory.ts  
+      file: SaleFactory/SaleFactory.wasm
   - kind: ethereum/contract
     name: EmissionsERC20Factory
     network: mumbai
@@ -179,10 +179,10 @@ dataSources:
         - Children
       abis:
         - name: Factory
-          file: ./abis/Factory.json
+          file: EmissionsERC20Factory/abis/Factory.json
       eventHandlers:
         - event: NewChild(address,address)
           handler: handleNewChild
         - event: Implementation(address,address)
           handler: handleImplementation
-      file: ./src/emissionsERC20Factory.ts 
+      file: EmissionsERC20Factory/EmissionsERC20Factory.wasm
